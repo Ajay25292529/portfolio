@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog — Ajay Koleti</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Section Title */
+    .section-title {
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--primary1);
+      margin-bottom: 50px;
+    }
+
+    /* Blog Grid */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    /* Blog Card */
+    .blog-card {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 1.8rem 1.5rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+
+    /* Card Content */
+    .blog-card h2 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+      color: var(--text-dark);
+      font-weight: 700;
+    }
+
+    .blog-card p {
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    /* Tags */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+
+    .tag {
+      background: var(--primary1);
+      color: #fff;
+      font-size: 0.8rem;
+      padding: 4px 10px;
+      border-radius: 8px;
+    }
+
+    /* Read More Button */
+    .btn-read {
+      align-self: flex-start;
+      padding: 8px 16px;
+      background: var(--primary1);
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .btn-read:hover {
+      background: #0056b3;
+    }
+
+    /* Footer social links */
+    .footer .social {
+      margin-top: 12px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .footer .social a {
+      color: var(--text-muted);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .footer .social a:hover {
+      color: var(--primary1);
+    }
+
+    @media(max-width:500px){
+      .section-title { font-size: 2.4rem; margin-bottom: 35px; }
+      .blog-card { padding: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">Ajay Koleti</a>
+      <div class="nav-controls">
+        <button id="themeToggle6" class="theme-btn" aria-label="Toggle theme">🌙</button>
+        <button id="menuBtn6" class="menu-btn" aria-label="Open menu">☰</button>
+      </div>
+      <nav id="navMenu6" class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container">
+    <h1 class="section-title">Blog</h1>
+
+    <section class="blog-grid">
+
+      <!-- BLOG POST 1 -->
+      <article class="blog-card reveal">
+        <div class="tags">
+          <span class="tag">Coding</span>
+          <span class="tag">Beginner</span>
+        </div>
+        <h2>How I Started Coding</h2>
+        <p>
+          My journey into programming began with curiosity about computers and problem-solving.
+          From HTML/CSS basics to building real JavaScript projects, I learned how to turn ideas into reality.
+        </p>
+        <a href="#" class="btn-read">Read More →</a>
+      </article>
+
+      <!-- BLOG POST 2 -->
+      <article class="blog-card reveal">
+        <div class="tags">
+          <span class="tag">Data Science</span>
+          <span class="tag">Python</span>
+        </div>
+        <h2>Data Science for Beginners</h2>
+        <p>
+          This post simplifies Machine Learning, Pandas, NumPy, and Python into clear steps.
+          Learn to analyze data effectively and start your journey as a data enthusiast.
+        </p>
+        <a href="#" class="btn-read">Read More →</a>
+      </article>
+
+      <!-- BLOG POST 3 -->
+      <article class="blog-card reveal">
+        <div class="tags">
+          <span class="tag">Productivity</span>
+          <span class="tag">Students</span>
+        </div>
+        <h2>Best Tips for Students</h2>
+        <p>
+          Focus, consistent effort, and smart planning are keys to achieving goals.
+          Here I share my strategies: study roadmaps, time management, motivation, and disciplined work.
+        </p>
+        <a href="#" class="btn-read">Read More →</a>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>Made with ❤️ by <strong>Ajay Koleti</strong></p>
+      <div class="social">
+        <a href="https://www.instagram.com/your_username" target="_blank" aria-label="Instagram">Instagram</a>
+        <a href="https://www.linkedin.com/in/koleti-ajay-328031334" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+        <a href="https://github.com/ajay25292529" target="_blank" aria-label="GitHub">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

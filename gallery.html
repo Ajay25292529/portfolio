@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery — Ajay Koleti</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Gallery Grid */
+    .section-title {
+      text-align: center;
+      font-size: 3rem;
+      color: var(--primary1);
+      font-weight: 800;
+      margin-bottom: 60px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .gallery-card {
+      background: var(--card);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      display: block;
+      border-radius: 18px;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 35px rgba(0,0,0,0.15);
+    }
+
+    .gallery-card:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Optional overlay on hover */
+    .gallery-card::after {
+      content: "🔍 View";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.2rem;
+      color: #fff;
+      background: rgba(0, 123, 255, 0.7);
+      padding: 10px 20px;
+      border-radius: 12px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery-card:hover::after {
+      opacity: 1;
+    }
+
+    /* Footer */
+    .footer-inner {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--text-muted);
+    }
+
+    /* Responsive tweaks */
+    @media(max-width:500px){
+      .section-title { font-size: 2.4rem; margin-bottom: 40px; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">Ajay Koleti</a>
+      <div class="nav-controls">
+        <button id="themeToggle7" class="theme-btn" aria-label="Toggle theme">🌙</button>
+        <button id="menuBtn7" class="menu-btn" aria-label="Open menu">☰</button>
+      </div>
+      <nav id="navMenu7" class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container">
+    <h1 class="section-title">Gallery</h1>
+
+    <div class="gallery-grid">
+
+      <!-- Gallery Image 1 -->
+      <div class="gallery-card reveal">
+        <img src="assets/images/project1.jpg" alt="Weather Web App Screenshot">
+      </div>
+
+      <!-- Gallery Image 2 -->
+      <div class="gallery-card reveal">
+        <img src="assets/images/project2.jpg" alt="Calculator Web App Screenshot">
+      </div>
+
+      <!-- Gallery Image 3 -->
+      <div class="gallery-card reveal">
+        <img src="assets/images/project3.jpg" alt="Money Manager Web App Screenshot">
+      </div>
+
+      <!-- Additional images can be added here -->
+      <!-- Example: <div class="gallery-card reveal"><img src="assets/images/project4.jpg" alt="Project 4"></div> -->
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>Made with ❤ by <strong>Ajay Koleti</strong></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

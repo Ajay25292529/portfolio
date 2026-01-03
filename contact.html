@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Ajay Koleti</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; background: var(--bg-grad); color: var(--text-dark); }
+    .contact-page { padding: 80px 24px; max-width: 800px; margin: auto; }
+    .section-title { font-size: 3rem; color: var(--primary1); text-align: center; margin-bottom: 50px; font-weight: 800; letter-spacing: 1px; }
+
+    p { font-size: 1.15rem; color: var(--text-muted); text-align: center; margin-bottom: 40px; }
+
+    /* FORM STYLING */
+    .contact-form { display: flex; flex-direction: column; gap: 20px; background: var(--card); padding: 32px; border-radius: 18px; box-shadow: var(--shadow); }
+    .contact-form label { display: flex; flex-direction: column; font-weight: 600; color: var(--text-dark); }
+    .contact-form input, .contact-form textarea {
+      margin-top: 8px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      transition: all 0.3s;
+      background: #fff;
+    }
+    .contact-form input:focus, .contact-form textarea:focus {
+      outline: none;
+      border-color: var(--primary1);
+      box-shadow: 0 0 15px rgba(99,102,241,0.2);
+    }
+    .contact-form button {
+      padding: 12px 20px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(135deg,var(--primary1),var(--primary2));
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .contact-form button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(99,102,241,0.25);
+    }
+
+    /* CONTACT INFO */
+    .contact-info { margin-top: 50px; text-align: center; font-size: 1.15rem; color: var(--text-muted); }
+    .contact-info a { color: var(--primary1); font-weight: 600; text-decoration: none; transition: transform 0.3s; }
+    .contact-info a:hover { transform: translateY(-2px); }
+
+    /* FOOTER */
+    .footer-inner { margin-top: 80px; text-align: center; color: var(--text-muted); }
+
+    /* RESPONSIVE */
+    @media(max-width:600px) {
+      .contact-form { padding: 24px; }
+      .section-title { font-size: 2.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">Ajay Koleti</a>
+      <div class="nav-controls">
+        <button id="themeToggle4" class="theme-btn" aria-label="Toggle theme">🌙</button>
+        <button id="menuBtn4" class="menu-btn" aria-label="Open menu">☰</button>
+      </div>
+      <nav id="navMenu4" class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTACT SECTION -->
+  <main class="container contact-page">
+    <h1 class="section-title">Contact Me</h1>
+    <p>If you'd like to collaborate, send a message or drop an email. I respond quickly!</p>
+
+    <!-- FORM -->
+    <form class="contact-form" action="#" method="post" onsubmit="alert('Demo form — replace with backend or email service.'); return false;">
+      <label>Name
+        <input type="text" name="name" placeholder="Your full name" required>
+      </label>
+      <label>Email
+        <input type="email" name="email" placeholder="yourname@example.com" required>
+      </label>
+      <label>Message
+        <textarea name="message" rows="6" placeholder="Write your message here..." required></textarea>
+      </label>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- CONTACT INFO -->
+    <div class="contact-info">
+      <p>Email: <a href="mailto:ajaykoleti@example.com">ajaykoleti@example.com</a></p>
+      <p>Location: Anantapuram, India</p>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>Made with ❤ by <span style="font-weight:600;">Ajay Koleti</span></p>
+      <div>
+        <a href="https://www.linkedin.com/in/koleti-ajay-328031334" target="_blank">LinkedIn</a>
+        <a href="https://github.com/ajay25292529" target="_blank">GitHub</a>
+        <a href="https://www.instagram.com/your_username" target="_blank">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

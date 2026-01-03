@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator Web App | Ajay Koleti</title>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    /* ===== Project Page Custom ===== */
+    .project-page {
+      padding: 60px 0;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .project-page h1 {
+      font-size: 2.4rem;
+      color: var(--primary1);
+      margin-bottom: 16px;
+    }
+    .project-page h2 {
+      font-size: 1.6rem;
+      color: var(--primary2);
+      margin-top: 40px;
+      margin-bottom: 16px;
+    }
+    .project-page p {
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 18px;
+    }
+    .project-page ul {
+      list-style: disc;
+      margin-left: 24px;
+      color: var(--text-muted);
+    }
+
+    /* Project Image */
+    .project-page img {
+      width: 100%;
+      border-radius: 14px;
+      margin: 24px 0;
+      box-shadow: 0 12px 36px rgba(0,0,0,0.12);
+      transition: transform 0.5s, box-shadow 0.5s;
+    }
+    .project-page img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.18);
+    }
+
+    /* Buttons */
+    .btn, .btn-outline {
+      padding: 12px 22px;
+      border-radius: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+    .btn {
+      background: linear-gradient(135deg,var(--primary1),var(--primary2));
+      color: #fff;
+      box-shadow: 0 8px 24px rgba(99,102,241,0.3);
+    }
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 48px rgba(99,102,241,0.35);
+    }
+    .btn-outline {
+      border: 2px solid var(--primary1);
+      color: var(--primary1);
+      background: transparent;
+    }
+    .btn-outline:hover {
+      background: var(--primary1);
+      color: #fff;
+    }
+
+    /* Button Container */
+    .btn-row {
+      margin-top: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    /* Footer Social Links */
+    .footer .social a {
+      margin-left: 16px;
+      color: var(--text-muted);
+      text-decoration: none;
+      position: relative;
+    }
+    .footer .social a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg,var(--primary1),var(--primary2));
+      transition: width 0.3s ease;
+    }
+    .footer .social a:hover::after {
+      width: 100%;
+    }
+
+    /* Responsive */
+    @media(max-width:760px){
+      .btn-row {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="../index.html">Ajay Koleti</a>
+
+      <nav class="nav-menu">
+        <a href="../index.html">Home</a>
+        <a href="../projects.html">Projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container project-page">
+    <h1>Calculator Web Application</h1>
+    <p>
+      A simple, responsive calculator web app built with HTML, CSS, and JavaScript.
+    </p>
+
+    <!-- Project Image -->
+    <img src="../assets/images/project2.jpg" alt="Calculator Web App Screenshot">
+
+    <h2>📌 Project Description</h2>
+    <p>
+      This calculator app performs basic arithmetic operations such as addition,
+      subtraction, multiplication, and division. Designed with a clean interface
+      and smooth user interaction, fully responsive across devices.
+    </p>
+
+    <h2>🛠 Technologies Used</h2>
+    <ul>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+    </ul>
+
+    <h2>🚀 Features</h2>
+    <ul>
+      <li>Basic arithmetic operations</li>
+      <li>Responsive design for all devices</li>
+      <li>Simple and clean user interface</li>
+      <li>Fast and accurate calculations</li>
+    </ul>
+
+    <!-- Buttons -->
+    <div class="btn-row">
+      <a href="../index.html" class="btn">← Back to Portfolio</a>
+      <a href="https://ajay25292529.github.io/calculater-application/" class="btn btn-outline" target="_blank">🌐 Live Demo</a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>Made with ❤ by Ajay Koleti</p>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/koleti-ajay-328031334" target="_blank">LinkedIn</a>
+        <a href="https://github.com/ajay25292529" target="_blank">GitHub</a>
+        <a href="https://www.instagram.com/your_username" target="_blank">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
